@@ -329,7 +329,7 @@ const Cards = () => {
 
 
             {/* Products */}
-            <div className="flex flex-wrap gap-8 p-20">
+            <div className="flex flex-wrap gap-8 p-20 pl-10">
                 {products.map((product, index) => (
                     <div key={index} className="relative w-72 sm:w-86 md:w-72 bg-gray-100 overflow-hidden shadow-lg group cursor-pointer">
                         {/* Hover Overlay */}
