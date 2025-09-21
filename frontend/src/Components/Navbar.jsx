@@ -9,19 +9,19 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="w-full bg-white shadow-md fixed top-0 left-0 z-50">
-      <div className="px-4 sm:px-6 lg:px-20 py-4 flex justify-between items-center">
+    <nav className="w-full bg-white shadow-md top-0 left-0 z-50">
+      <div className="px-4 sm:px-6 lg:px-20 lg:py-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <div>
           <img
             src={logo}
             alt="Furniro"
-            className="w-24 sm:w-28 md:w-32 cursor-pointer"
+            className="w-24 sm:w-28 md:w-36 cursor-pointer"
           />
         </div>
 
         {/* Links (Desktop Only) */}
-        <div className="hidden md:flex gap-8 text-gray-700 font-medium ml-10">
+        <div className="hidden md:flex gap-13 text-gray-700 font-medium ml-10">
           <a href="#" className="hover:text-yellow-600 transition">Home</a>
           <a href="#" className="hover:text-yellow-600 transition">Shop</a>
           <a href="#" className="hover:text-yellow-600 transition">About</a>
@@ -29,7 +29,7 @@ const Navbar = () => {
         </div>
 
         {/* Icons (Desktop Only) */}
-        <div className="hidden sm:flex gap-4 md:gap-6 items-center">
+        <div className="hidden sm:flex gap-4 md:gap-9 items-center">
           <img src={humanIcon} alt="User" className="w-6 h-6 cursor-pointer" />
           <img src={searchIcon} alt="Search" className="w-6 h-6 cursor-pointer" />
           <img src={heartIcon} alt="Wishlist" className="w-6 h-6 cursor-pointer" />
