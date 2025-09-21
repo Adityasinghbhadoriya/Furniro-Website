@@ -329,13 +329,16 @@ const Cards = () => {
 
 
             {/* Products */}
-            <div className="flex flex-wrap gap-8 p-20 ml-10">
+            <div className="flex flex-wrap gap-6 p-4 sm:p-10 justify-center">
                 {products.map((product, index) => (
-                    <div key={index} className="relative w-72 sm:w-86 md:w-72 bg-gray-100 overflow-hidden shadow-lg group cursor-pointer">
+                    <div
+                        key={index}
+                        className="relative w-full sm:w-72 md:w-80 lg:w-72 bg-gray-100 overflow-hidden shadow-lg group cursor-pointer"
+                    >
                         {/* Hover Overlay */}
                         <div className="absolute inset-0 bg-opacity-0 group-hover:backdrop-brightness-50 flex items-center justify-center gap-3 transition duration-300 z-20 pointer-events-none">
                             <button
-                                className="px-4 py-2 bg-[#f1e7cf] text-[#c78437] hover:bg-[#e29236] hover:text-white font-bold opacity-0 group-hover:opacity-100 transition pointer-events-auto cursor-pointer"
+                                className="px-3 py-1 sm:px-4 sm:py-2 bg-[#f1e7cf] text-[#c78437] hover:bg-[#e29236] hover:text-white font-bold opacity-0 group-hover:opacity-100 transition pointer-events-auto cursor-pointer text-sm sm:text-base"
                                 onClick={() => {
                                     setCurrentProduct(product);
                                     setFormData({
@@ -353,7 +356,7 @@ const Cards = () => {
                                 Update
                             </button>
                             <button
-                                className="px-4 py-2 bg-[#f1e7cf] text-[#c78437] hover:bg-[#e29236] hover:text-white font-bold opacity-0 group-hover:opacity-100 transition pointer-events-auto cursor-pointer"
+                                className="px-3 py-1 sm:px-4 sm:py-2 bg-[#f1e7cf] text-[#c78437] hover:bg-[#e29236] hover:text-white font-bold opacity-0 group-hover:opacity-100 transition pointer-events-auto cursor-pointer text-sm sm:text-base"
                                 onClick={() => handleDelete(product._id)}
                             >
                                 Delete
@@ -361,7 +364,7 @@ const Cards = () => {
                         </div>
 
                         {/* Discount / New Badge */}
-                        <div className="absolute top-5 right-5 h-13 w-13 rounded-full flex items-center justify-center text-white z-30">
+                        <div className="absolute top-3 right-3 h-10 w-10 sm:h-12 sm:w-12 rounded-full flex items-center justify-center text-white z-30 text-xs sm:text-sm">
                             {product.isNewProduct ? (
                                 <div className="bg-green-500 w-full h-full flex items-center justify-center rounded-full">
                                     New
@@ -381,19 +384,19 @@ const Cards = () => {
                         <img
                             src={`https://furniro-website.onrender.com${product.imageUrl}`}
                             alt={product.name}
-                            className="object-cover w-full h-48 sm:h-60 md:h-72 transition-transform duration-300 group-hover:scale-105"
+                            className="object-cover w-full h-48 sm:h-60 md:h-72 lg:h-80 transition-transform duration-300 group-hover:scale-105"
                         />
 
                         {/* Product Info */}
-                        <div className="p-4 bg-white relative z-10">
-                            <h1 className="font-bold text-xl sm:text-2xl">{product.name}</h1>
-                            <p className="text-gray-500 mt-1">{product.description}</p>
-                            <h1 className="mt-1">{product.brand}</h1>
+                        <div className="p-3 sm:p-4 bg-white relative z-10">
+                            <h1 className="font-bold text-lg sm:text-xl md:text-2xl">{product.name}</h1>
+                            <p className="text-gray-500 mt-1 text-sm sm:text-base">{product.description}</p>
+                            <h1 className="mt-1 text-sm sm:text-base">{product.brand}</h1>
                             <div className="flex justify-between mt-2 items-center">
-                                <h1 className="font-bold text-lg sm:text-xl text-red-600">
+                                <h1 className="font-bold text-base sm:text-lg md:text-xl text-red-600">
                                     Rp {product.price}.000
                                 </h1>
-                                <h1 className="line-through text-gray-400">
+                                <h1 className="line-through text-gray-400 text-sm sm:text-base">
                                     Rp {product.originalPrice}.000
                                 </h1>
                             </div>
@@ -401,6 +404,7 @@ const Cards = () => {
                     </div>
                 ))}
             </div>
+
 
             {/* Pagination */}
             {totalPages > 1 && (
