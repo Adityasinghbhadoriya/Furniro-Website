@@ -361,7 +361,7 @@ const Cards = () => {
                         </div>
 
                         {/* Discount / New Badge */}
-                        <div className="absolute top-4 right-4 h-10 w-10 rounded-full flex items-center justify-center text-white font-bold z-30">
+                        <div className="absolute top-5 right-5 h-14 w-14 rounded-full flex items-center justify-center text-white z-30">
                             {product.isNewProduct ? (
                                 <div className="bg-green-500 w-full h-full flex items-center justify-center rounded-full">
                                     New
