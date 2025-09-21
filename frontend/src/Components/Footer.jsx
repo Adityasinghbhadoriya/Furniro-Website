@@ -6,8 +6,8 @@ import shippingIcon from '../assets/freeShipping.svg';
 
 const Footer = () => {
   return (
-    <div className="bg-[#F9F1E7] border-2 border-[#d9e0ea] px-6 sm:px-10 lg:px-20 py-8 lg:p-20">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div className="bg-[#F9F1E7] border-2 border-[#d9e0ea] px-6 sm:px-10 lg:px-20 py-8 lg:p-20 lg:pl-35 ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
 
         {/* Feature 1: High Quality */}
         <div className="flex items-center gap-3">
@@ -28,7 +28,7 @@ const Footer = () => {
         </div>
 
         {/* Feature 3: Free Shipping */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 ml-5">
           <img src={shippingIcon} alt="Free Shipping" className="w-10 h-10" />
           <div>
             <p className="text-black text-lg sm:text-xl lg:text-2xl font-bold">Free Shipping</p>

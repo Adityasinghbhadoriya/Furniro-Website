@@ -171,7 +171,7 @@ const Cards = () => {
         <div className="">
             <Toaster position="top-center" />
             {/* Top Filter / Sort Section */}
-            <div className="w-full bg-[#F9F1E7] -mt-2 px-4 sm:px-6 md:px-10 py-4 sm:py-6 relative">
+            <div className="w-full bg-[#F9F1E7] -mt-2 px-4 sm:px-6 md:px-15 py-4 sm:py-6 relative">
                 <div className="w-full flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
 
                     {/* Left Section */}
@@ -185,7 +185,7 @@ const Cards = () => {
                                     onClick={() => setFilterOpen(prev => !prev)}
                                 >
                                     <img src={filterIcon} alt="Filter" className="w-6 h-6" />
-                                    <h1 className="font-medium text-sm sm:text-base">Filter</h1>
+                                    <h1 className="font-medium text-sm sm:text-base hover:text-[#ce7c1e]">Filter</h1>
                                 </div>
 
                                 {/* Filter Panel */}
@@ -277,7 +277,7 @@ const Cards = () => {
                     {/* Center Section (Add Product) */}
                     <div className="w-full sm:w-auto flex justify-center lg:justify-start">
                         <button
-                            className="px-5 py-2 bg-white text-[#c78437] font-bold shadow cursor-pointer w-full sm:w-auto"
+                            className="px-6 py-4 bg-white text-[#c78437] font-bold shadow cursor-pointer w-full sm:w-auto hover:bg-[#c78437] hover:text-white transition duration-200"
                             onClick={() => setShowCreatePopup(true)}
                         >
                             Add Product
@@ -291,7 +291,7 @@ const Cards = () => {
                         <div className="flex items-center gap-3">
                             <h1 className="font-medium text-sm sm:text-base">Show</h1>
                             <select
-                                className="h-10 w-16 bg-white text-gray-400 shadow px-2 cursor-pointer"
+                                className="h-13 w-16 rounded bg-white text-black shadow px-2 cursor-pointer"
                                 value={limit}
                                 onChange={(e) => {
                                     setLimit(Number(e.target.value));
@@ -308,7 +308,7 @@ const Cards = () => {
                         <div className="flex items-center gap-3">
                             <h1 className="font-medium text-sm sm:text-base">Sort by</h1>
                             <select
-                                className="h-10 w-36 bg-white text-gray-400 shadow px-2 cursor-pointer"
+                                className="h-13 w-40 rounded bg-white text-black shadow px-2 cursor-pointer"
                                 value={`${sortBy}-${order}`}
                                 onChange={(e) => {
                                     const [field, sortOrder] = e.target.value.split("-");

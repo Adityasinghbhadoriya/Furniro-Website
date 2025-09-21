@@ -9,15 +9,15 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="w-full bg-white shadow-md">
-      <div className="px-4 sm:px-6 lg:px-12 py-4 flex justify-between items-center">
+    <div className="h-20 w-full bg-white shadow-md">
+      <div className="px-4 sm:px-6 lg:px-25 py-6 flex justify-between items-center">
         {/* Logo */}
         <div>
-          <img src={logo} alt="Furniro" className="w-24 sm:w-28 md:w-32" />
+          <img src={logo} alt="Furniro" className="w-24 sm:w-28 md:w-37 cursor-pointer" />
         </div>
 
         {/* Links (Desktop Only) */}
-        <div className="hidden md:flex gap-8 lg:gap-12 text-gray-700 font-medium">
+        <div className="hidden md:flex gap-8 lg:gap-18 text-gray-700 font-medium ml-10">
           <a href="#" className="hover:text-yellow-600">Home</a>
           <a href="#" className="hover:text-yellow-600">Shop</a>
           <a href="#" className="hover:text-yellow-600">About</a>
@@ -25,7 +25,7 @@ const Navbar = () => {
         </div>
 
         {/* Icons */}
-        <div className="hidden sm:flex gap-6 items-center">
+        <div className="hidden sm:flex gap-10 items-center">
           <img src={humanIcon} alt="User" className="w-6 h-6 cursor-pointer" />
           <img src={searchIcon} alt="Search" className="w-6 h-6 cursor-pointer" />
           <img src={heartIcon} alt="Wishlist" className="w-6 h-6 cursor-pointer" />
