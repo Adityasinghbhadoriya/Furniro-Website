@@ -329,9 +329,9 @@ const Cards = () => {
 
 
             {/* Products */}
-            <div className="flex flex-wrap gap-8 p-15">
+            <div className="flex flex-wrap gap-8 p-20">
                 {products.map((product, index) => (
-                    <div key={index} className="relative w-72 sm:w-80 md:w-80 bg-gray-100 overflow-hidden shadow-lg group cursor-pointer">
+                    <div key={index} className="relative w-72 sm:w-86 md:w-72 bg-gray-100 overflow-hidden shadow-lg group cursor-pointer">
                         {/* Hover Overlay */}
                         <div className="absolute inset-0 bg-opacity-0 group-hover:backdrop-brightness-50 flex items-center justify-center gap-3 transition duration-300 z-20 pointer-events-none">
                             <button
@@ -361,7 +361,7 @@ const Cards = () => {
                         </div>
 
                         {/* Discount / New Badge */}
-                        <div className="absolute top-5 right-5 h-14 w-14 rounded-full flex items-center justify-center text-white z-30">
+                        <div className="absolute top-5 right-5 h-13 w-13 rounded-full flex items-center justify-center text-white z-30">
                             {product.isNewProduct ? (
                                 <div className="bg-green-500 w-full h-full flex items-center justify-center rounded-full">
                                     New
