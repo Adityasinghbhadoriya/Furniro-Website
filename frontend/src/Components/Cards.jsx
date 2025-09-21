@@ -335,7 +335,7 @@ const Cards = () => {
                         {/* Hover Overlay */}
                         <div className="absolute inset-0 bg-opacity-0 group-hover:backdrop-brightness-50 flex items-center justify-center gap-3 transition duration-300 z-20 pointer-events-none">
                             <button
-                                className="px-4 py-2 bg-[#f1e7cf] text-[#c78437] font-bold opacity-0 group-hover:opacity-100 transition pointer-events-auto cursor-pointer"
+                                className="px-4 py-2 bg-[#f1e7cf] text-[#c78437] hover:bg-[#e2cc99] font-bold opacity-0 group-hover:opacity-100 transition pointer-events-auto cursor-pointer"
                                 onClick={() => {
                                     setCurrentProduct(product);
                                     setFormData({
@@ -353,7 +353,7 @@ const Cards = () => {
                                 Update
                             </button>
                             <button
-                                className="px-4 py-2 bg-[#f1e7cf] text-[#c78437] font-bold opacity-0 group-hover:opacity-100 transition pointer-events-auto cursor-pointer"
+                                className="px-4 py-2 bg-[#f1e7cf] text-[#c78437] hover:bg-[#e2cc99] font-bold opacity-0 group-hover:opacity-100 transition pointer-events-auto cursor-pointer"
                                 onClick={() => handleDelete(product._id)}
                             >
                                 Delete
